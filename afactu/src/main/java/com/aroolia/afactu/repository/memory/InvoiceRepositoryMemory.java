@@ -1,11 +1,14 @@
-package com.aroolia.afactu.repository;
+package com.aroolia.afactu.repository.memory;
 
 import com.aroolia.afactu.entity.Invoice;
+import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface{
+@Repository
+public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
     private static List<Invoice> invoices=new ArrayList<>();
 

@@ -1,12 +1,12 @@
-package com.aroolia.afactu.controller;
+package com.aroolia.afactu.controller.scan;
 
+import com.aroolia.afactu.controller.InvoiceControllerInterface;
 import com.aroolia.afactu.entity.Invoice;
-
 import com.aroolia.afactu.service.InvoiceServiceInterface;
+import org.springframework.stereotype.Controller;
 
-import java.util.Scanner;
-
-public class InvoiceControllerKeyboard implements InvoiceControllerInterface{
+@Controller
+public class InvoiceControllerDouchette implements InvoiceControllerInterface {
 
     private InvoiceServiceInterface invoiceService;
 
@@ -18,14 +18,11 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface{
         this.invoiceService = invoiceService;
     }
 
-    public void createInvoice(){
-        System.out.println( "What is the customer name?" );
-        Scanner sc=new Scanner(System.in);
-        String customerName=sc.nextLine();
+    @Override
+    public void createInvoice() {
+        System.out.println("Usage of a scanner");
         Invoice invoice=new Invoice();
-        invoice.setCustomerName(customerName);
-
+        invoice.setCustomerName("Virgin Galactic");
         invoiceService.createInvoice(invoice);
     }
-
 }
