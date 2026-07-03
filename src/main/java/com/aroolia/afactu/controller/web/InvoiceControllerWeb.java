@@ -1,10 +1,16 @@
-package com.aroolia.afactu.controller;
+package com.aroolia.afactu.controller.web;
 
+import com.aroolia.afactu.controller.InvoiceControllerInterface;
 import com.aroolia.afactu.entity.Invoice;
+
 import com.aroolia.afactu.service.InvoiceServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-public class InvoiceControllerDouchette implements InvoiceControllerInterface {
+@Controller
+public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
+    @Autowired
     private InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {
@@ -15,11 +21,12 @@ public class InvoiceControllerDouchette implements InvoiceControllerInterface {
         this.invoiceService = invoiceService;
     }
 
-    @Override
-    public void createInvoice() {
-        System.out.println("Usage of a scanner");
+    public void createInvoice(){
+
+        String customerName="Tesla";
         Invoice invoice=new Invoice();
-        invoice.setCustomerName("Virgin Galactic");
+        invoice.setCustomerName(customerName);
+
         invoiceService.createInvoice(invoice);
     }
 }

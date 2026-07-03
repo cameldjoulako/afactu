@@ -1,11 +1,14 @@
-package com.aroolia.afactu.service;
+package com.aroolia.afactu.service.number;
 
 
 import com.aroolia.afactu.entity.Invoice;
 
 import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.service.InvoiceServiceInterface;
+import org.springframework.stereotype.Service;
 
-public class InvoiceServiceNumber implements InvoiceServiceInterface{
+@Service
+public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     private static long lastNumber=0L;
 

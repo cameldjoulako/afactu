@@ -5,16 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+
     <context:annotation-config/>
     <context:property-placeholder location="classpath:application.properties" />
+    <context:component-scan base-package="com.aroolia.afactu.controller.web" />
+    <context:component-scan base-package="com.aroolia.afactu.service.prefix" />
+    <context:component-scan base-package="com.aroolia.afactu.repository.database" />
 
-    <bean class="com.aroolia.afactu.service.InvoiceServicePrefix">
-    </bean>
+    <!--bean class="com.aroolia.afactu.service.InvoiceServicePrefix" />
 
-    <bean class="com.aroolia.afactu.controller.InvoiceControllerWeb">
-    </bean>
+    <bean class="com.aroolia.afactu.controller.web.InvoiceControllerWeb" />
 
-    <bean class="com.aroolia.afactu.repository.InvoiceRepositoryDatabase">
-    </bean>
+    <bean class="com.aroolia.afactu.repository.InvoiceRepositoryDatabase" /-->
 
 </beans>
