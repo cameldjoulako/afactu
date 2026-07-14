@@ -5,7 +5,7 @@ import com.aroolia.afactu.entity.Invoice;
 import com.aroolia.afactu.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class InvoiceControllerDouchette implements InvoiceControllerInterface {
 
     private InvoiceServiceInterface invoiceService;
