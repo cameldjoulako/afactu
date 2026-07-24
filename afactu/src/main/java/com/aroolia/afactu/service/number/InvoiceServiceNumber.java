@@ -7,6 +7,8 @@ import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 //@Service
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
@@ -25,5 +27,10 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     public void createInvoice(Invoice invoice){
         invoice.setNumber(String.valueOf(++lastNumber));
         invoiceRepository.create(invoice);
+    }
+
+    @Override
+    public List<Invoice> getInvoiceList() {
+        return invoiceRepository.list();
     }
 }
