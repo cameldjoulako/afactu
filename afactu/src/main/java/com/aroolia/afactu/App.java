@@ -14,6 +14,7 @@ import java.util.Scanner;
 @SpringBootApplication
 /*@Configuration
 @ComponentScan
+@EnableAutoConfiguration
 */
 //@PropertySource("classpath:application.properties")
 public class App
