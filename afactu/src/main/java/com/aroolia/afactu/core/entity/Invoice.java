@@ -1,4 +1,4 @@
-package com.aroolia.afactu.entity;
+package com.aroolia.afactu.core.entity;
 
 public class Invoice {
 

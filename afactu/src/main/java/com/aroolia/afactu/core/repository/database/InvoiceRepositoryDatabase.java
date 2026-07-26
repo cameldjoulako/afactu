@@ -1,8 +1,8 @@
-package com.aroolia.afactu.repository.database;
+package com.aroolia.afactu.core.repository.database;
 
 
-import com.aroolia.afactu.entity.Invoice;
-import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

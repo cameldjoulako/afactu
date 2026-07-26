@@ -1,6 +1,6 @@
-package com.aroolia.afactu.controller;
+package com.aroolia.afactu.core.controller;
 
-import com.aroolia.afactu.service.InvoiceServiceInterface;
+import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Controller;
 
 @Controller

@@ -1,13 +1,12 @@
-package com.aroolia.afactu.service.prefix;
+package com.aroolia.afactu.core.service.prefix;
 
-import com.aroolia.afactu.entity.Invoice;
-import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
-import com.aroolia.afactu.service.InvoiceServiceInterface;
+import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.List;
 
 @Service

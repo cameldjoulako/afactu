@@ -1,11 +1,10 @@
-package com.aroolia.afactu.service.number;
+package com.aroolia.afactu.core.service.number;
 
 
-import com.aroolia.afactu.entity.Invoice;
+import com.aroolia.afactu.core.entity.Invoice;
 
-import com.aroolia.afactu.repository.InvoiceRepositoryInterface;
-import com.aroolia.afactu.service.InvoiceServiceInterface;
-import org.springframework.stereotype.Service;
+import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 
 import java.util.List;
 

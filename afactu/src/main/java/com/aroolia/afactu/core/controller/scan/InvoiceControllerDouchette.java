@@ -1,9 +1,8 @@
-package com.aroolia.afactu.controller.scan;
+package com.aroolia.afactu.core.controller.scan;
 
-import com.aroolia.afactu.controller.InvoiceControllerInterface;
-import com.aroolia.afactu.entity.Invoice;
-import com.aroolia.afactu.service.InvoiceServiceInterface;
-import org.springframework.stereotype.Controller;
+import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 
 //@Controller
 public class InvoiceControllerDouchette implements InvoiceControllerInterface {
