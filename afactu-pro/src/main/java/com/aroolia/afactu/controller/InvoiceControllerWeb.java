@@ -1,0 +1,51 @@
+package com.aroolia.afactu.controller;
+
+import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.core.entity.Invoice;
+
+import com.aroolia.afactu.core.service.InvoiceServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpServletRequest;
+import java.util.List;
+
+import static java.lang.System.*;
+
+@Controller
+public class InvoiceControllerWeb implements InvoiceControllerInterface {
+
+    @Autowired
+    private InvoiceServiceInterface invoiceService;
+
+    public InvoiceServiceInterface getInvoiceService() {
+        return invoiceService;
+    }
+
+    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
+        this.invoiceService = invoiceService;
+    }
+
+    public void createInvoice(){
+
+        String customerName="Tesla";
+        Invoice invoice=new Invoice();
+        invoice.setCustomerName(customerName);
+
+        invoiceService.createInvoice(invoice);
+    }
+
+    @RequestMapping("/invoice-home")
+    public @ModelAttribute("invoices") List<Invoice> displayHome(HttpServletRequest request) {
+
+        out.println("La méthode displayHome a été invoquée") ;
+        List<Invoice> invoices = invoiceService.getInvoiceList() ;
+
+        //request.setAttribute("invoices", invoices);
+        //return "index" ;
+
+        return invoices;
+    }
+}
