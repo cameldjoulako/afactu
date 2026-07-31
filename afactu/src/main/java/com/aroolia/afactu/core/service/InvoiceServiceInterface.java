@@ -14,4 +14,6 @@ public interface InvoiceServiceInterface {
     List<Invoice> getInvoiceList();
 
     void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository);
+
+    Invoice getInvoiceByNumber(String number);
 }

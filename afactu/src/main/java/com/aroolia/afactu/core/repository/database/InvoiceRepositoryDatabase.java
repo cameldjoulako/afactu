@@ -31,4 +31,15 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
 
         return List.of(invoice1, invoice2);
     }
+
+    @Override
+    public Invoice getById(String number) {
+
+        Invoice invoice1 = new Invoice();
+        invoice1.setNumber(number);
+        invoice1.setCustomerName("Camel Djoulako");
+        invoice1.setOrderNumber("ON_002");
+
+        return invoice1;
+    }
 }
