@@ -1,5 +1,6 @@
 package com.aroolia.afactu.core.entity;
 
+
 public class Invoice {
 
     private String number;
