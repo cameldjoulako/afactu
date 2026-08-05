@@ -5,14 +5,16 @@ import com.aroolia.afactu.core.entity.Invoice;
 
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//@Service
+@Service
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
-    private static long lastNumber=0L;
-
+    //private static long lastNumber=0L;
+    //@Autowired
     private InvoiceRepositoryInterface invoiceRepository;
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
@@ -24,10 +26,12 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     }
 
     public Invoice createInvoice(Invoice invoice){
-        invoice.setNumber(String.valueOf(++lastNumber));
-        invoiceRepository.create(invoice);
+        //invoice.setNumber(String.valueOf(++lastNumber));//la bd se charge
 
-        return invoice;
+
+        return invoiceRepository.create(invoice);
+
+        //return invoice;
     }
 
     @Override

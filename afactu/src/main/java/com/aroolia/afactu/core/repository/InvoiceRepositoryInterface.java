@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface InvoiceRepositoryInterface {
-    void create(Invoice invoice);
+    Invoice create(Invoice invoice);
 
     List<Invoice> list();
 
