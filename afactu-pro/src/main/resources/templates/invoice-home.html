@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Afactu : Gestion des factures</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1> Gestion des Factures </h1>
+<h2>Actions</h2>
+
+<ul>
+    <li>
+        <a href="create-form" class="">Créer une Facture</a>
+    </li>
+</ul>
+
+<section class="container">
+    <div class="left-half">
+        <article id="invoice-list">
+
+        </article>
+    </div>
+    <div class="right-half">
+        <article id="invoice-detail">
+
+        </article>
+    </div>
+</section>
+
+<script th:src="@{/js/script.js}" ></script>
+</body>
+</html>
