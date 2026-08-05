@@ -25,7 +25,7 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
         KeyHolder kh = new GeneratedKeyHolder();
         jdbcTemplate.update(connexion  -> {
 
-            PreparedStatement ps = connexion.prepareStatement("INSERT INTO INVOICE(CUSTUMER_NAME, ORDER_NUMBER) VALUES (?, ?)",
+            PreparedStatement ps = connexion.prepareStatement("INSERT INTO INVOICE(CUSTOMER_NAME, ORDER_NUMBER) VALUES (?, ?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, invoice.getCustomerName());
             ps.setString(2, invoice.getOrderNumber());

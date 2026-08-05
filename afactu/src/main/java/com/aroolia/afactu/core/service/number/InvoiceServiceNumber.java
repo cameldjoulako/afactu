@@ -13,14 +13,13 @@ import java.util.List;
 @Service
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
-    //private static long lastNumber=0L;
-    //@Autowired
     private InvoiceRepositoryInterface invoiceRepository;
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
     }
 
+    @Autowired
     public void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
     }
