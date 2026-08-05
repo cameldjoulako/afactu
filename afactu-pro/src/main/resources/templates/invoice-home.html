@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Afactu : Gestion des factures</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<h1> Bienvenu(e) dans la page de gestion des factures </h1>
-<h2>Actions disponibles</h2>
+<h1> Gestion des Factures </h1>
+<h2>Actions</h2>
 
 <ul>
     <li>
-        <a href="" class="">Ajout de facture</a>
+        <a href="create-form" class="">Créer une Facture</a>
     </li>
 </ul>
 
-<table border="1">
-    <tr th:each="invoice : ${invoices}">
-        <td>
-            <a th:href="@{/invoice-details/{number}{number=${invoice.number}}}" th:text="${invoice.number}"></a>
+<section class="container">
+    <div class="left-half">
+        <article id="invoice-list">
 
-        </td>
-        <td th:text="${invoice.customerName}"></td>
+        </article>
+    </div>
+    <div class="right-half">
+        <article id="invoice-detail">
 
+        </article>
+    </div>
+</section>
 
-    </tr>
-</table>
-
+<script th:src="@{/js/script.js}" ></script>
 </body>
 </html>
