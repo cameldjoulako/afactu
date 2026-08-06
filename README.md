@@ -14,7 +14,7 @@ d'historique.
 `afactu-pro` déclare une dépendance vers l'artifact `core`, qu'il résout depuis le dépôt Maven
 local `~/.m2`.
 
-## Build — l'ordre est obligatoire
+## Build : l'ordre est obligatoire
 
 Il n'y a **pas** de POM agrégateur à la racine : les deux modules se construisent séparément, et
 `core` doit être installé dans `~/.m2` **avant** toute construction d'`afactu-pro`.
