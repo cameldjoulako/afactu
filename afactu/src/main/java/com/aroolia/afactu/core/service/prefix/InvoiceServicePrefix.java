@@ -5,9 +5,6 @@ import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 //@Service
 public class InvoiceServicePrefix implements InvoiceServiceInterface {
@@ -47,18 +44,19 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
 
     public Invoice createInvoice(Invoice invoice){
         invoice.setNumber( prefix + (++lastNumber));
-        invoiceRepository.create(invoice);
+        invoiceRepository.save(invoice);
 
         return invoice;
     }
 
     @Override
-    public List<Invoice> getInvoiceList() {
-        return invoiceRepository.list();
+    public Iterable<Invoice> getInvoiceList() {
+        return invoiceRepository.findAll();
     }
 
     @Override
     public Invoice getInvoiceByNumber(String number) {
-        return invoiceRepository.getById(number);
+
+        return invoiceRepository.findById(number).orElseThrow();
     }
 }

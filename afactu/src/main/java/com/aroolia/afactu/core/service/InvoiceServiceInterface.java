@@ -5,13 +5,11 @@ import com.aroolia.afactu.core.entity.Invoice;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public interface InvoiceServiceInterface {
     Invoice createInvoice(Invoice invoice);
 
-    List<Invoice> getInvoiceList();
+    Iterable<Invoice> getInvoiceList();
 
     void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository);
 

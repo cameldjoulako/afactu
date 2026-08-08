@@ -1,3 +1,4 @@
+/*
 package com.aroolia.afactu.core.repository.database;
 
 
@@ -36,12 +37,16 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
         invoice.setNumber(kh.getKey().toString());
 
         return invoice;
-        /*[…]
+        */
+/*[…]
         PreparedStatement pstmt = connexion.prepareStatement("INSERT INTO FACTURE (NUMBER,CUSTOMERNAME) VALUES (?,?)");
                 […]
-        pstmt.executeUpdate();*/
+        pstmt.executeUpdate();*//*
 
-        /*System.out.println("Database: Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());*/
+
+        */
+/*System.out.println("Database: Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());*//*
+
     }
 
     @Override
@@ -52,7 +57,8 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
 
 
 
-        /*Invoice invoice1 = new Invoice();
+        */
+/*Invoice invoice1 = new Invoice();
         invoice1.setNumber("NUM_1");
         invoice1.setCustomerName("Gate Corp");
 
@@ -60,7 +66,8 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
         invoice2.setNumber("NUM_2");
         invoice2.setCustomerName("Alpha Metal");
 
-        return List.of(invoice1, invoice2);*/
+        return List.of(invoice1, invoice2);*//*
+
     }
 
     @Override
@@ -71,11 +78,13 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
                 (rs, rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
                         rs.getString("CUSTOMER_NAME"), rs.getString("ORDER_NUMBER") ));
 
-        /*Invoice invoice1 = new Invoice();
+        */
+/*Invoice invoice1 = new Invoice();
         invoice1.setNumber(number);
         invoice1.setCustomerName("Camel Djoulako");
         invoice1.setOrderNumber("ON_002");
 
-        return invoice1;*/
+        return invoice1;*//*
+
     }
-}
+}*/
