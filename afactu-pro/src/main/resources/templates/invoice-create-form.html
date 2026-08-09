@@ -5,14 +5,30 @@
     <title>Création de la facture</title>
 </head>
 <body>
-    <form th:action="@{/invoice/create}" method="POST" th:object="${invoiceForm}">
-        <p>Customer name : <input type="text" th:field="*{customerName}" /> </p>
-        <div th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}" ></div>
+<form th:action="@{/invoice/create}" method="POST" th:object="${invoiceForm}">
+    <p>Customer name : <input type="text" th:field="*{customerName}" /> </p>
+    <div th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}" ></div>
 
-        <p>Order number : <input type="text" th:field="*{orderNumber}" /> </p>
-        <div th:if="${#fields.hasErrors('orderNumber')}" th:errors="*{orderNumber}" ></div>
+    <p>Order number : <input type="text" th:field="*{orderNumber}" /> </p>
+    <div th:if="${#fields.hasErrors('orderNumber')}" th:errors="*{orderNumber}" ></div>
 
-        <input style="margin-top:1.5rem;" type="submit" value="OK">
-    </form>
+    <h3>Adresse du client</h3>
+
+    <p>Rue : <input type="text" th:field="*{street}" /> </p>
+    <div th:if="${#fields.hasErrors('street')}" th:errors="*{street}" ></div>
+
+    <p>Numéro : <input type="text" th:field="*{streetNumber}" /> </p>
+
+    <p>Ville : <input type="text" th:field="*{city}" /> </p>
+    <div th:if="${#fields.hasErrors('city')}" th:errors="*{city}" ></div>
+
+    <p>Code postal : <input type="text" th:field="*{zipCode}" /> </p>
+    <div th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}" ></div>
+
+    <p>Pays : <input type="text" th:field="*{country}" /> </p>
+    <div th:if="${#fields.hasErrors('country')}" th:errors="*{country}" ></div>
+
+    <input style="margin-top:1.5rem;" type="submit" value="OK">
+</form>
 </body>
-</HTML>
+</html>

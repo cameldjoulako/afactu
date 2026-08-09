@@ -1,6 +1,7 @@
 package com.aroolia.afactu.core.controller.keyboard;
 
 import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.core.entity.Customer;
 import com.aroolia.afactu.core.entity.Invoice;
 
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
@@ -26,7 +27,8 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
         String customerName=sc.nextLine();
 
         invoice=new Invoice();
-        invoice.setCustomerName(customerName);
+        Customer customer = new Customer(customerName);
+        invoice.setCustomer(customer);
 
         invoiceService.createInvoice(invoice);
 

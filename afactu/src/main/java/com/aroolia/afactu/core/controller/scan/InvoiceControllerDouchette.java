@@ -1,6 +1,7 @@
 package com.aroolia.afactu.core.controller.scan;
 
 import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.core.entity.Customer;
 import com.aroolia.afactu.core.entity.Invoice;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 
@@ -20,10 +21,9 @@ public class InvoiceControllerDouchette implements InvoiceControllerInterface {
     @Override
     public String createInvoice(Invoice invoice) {
         System.out.println("Usage of a scanner");
-
         invoice=new Invoice();
-        invoice.setCustomerName("Virgin Galactic");
-
+        Customer customer = new Customer("Virgin Galactic");
+        invoice.setCustomer(customer);
         invoiceService.createInvoice(invoice);
 
         return null;
