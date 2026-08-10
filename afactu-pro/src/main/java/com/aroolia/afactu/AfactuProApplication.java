@@ -19,5 +19,4 @@ public class AfactuProApplication {
         return new Hibernate7Module();
     }
 
-
 }

@@ -17,6 +17,20 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         return invoiceRepository;
     }
 
+    @Override
+    public Iterable<Invoice> getInvoiceList() {
+
+
+        Iterable<Invoice> invoices =  invoiceRepository.findAll();
+
+        //initialisation du client de chaque facture
+        invoices.forEach(invoice -> {
+            invoice.getCustomer().getName();
+        });
+
+        return invoices;
+    }
+
     @Autowired
     public void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
@@ -31,10 +45,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         //return invoice;
     }
 
-    @Override
-    public Iterable<Invoice> getInvoiceList() {
-        return invoiceRepository.findAll();
-    }
+
 
     @Override
     public Invoice getInvoiceByNumber(String number) {
