@@ -8,6 +8,7 @@ import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
@@ -45,6 +46,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
+    @Transactional
     public Invoice createInvoice(Invoice invoice){
         //invoice.setNumber(String.valueOf(++lastNumber));//la bd se charge
 
