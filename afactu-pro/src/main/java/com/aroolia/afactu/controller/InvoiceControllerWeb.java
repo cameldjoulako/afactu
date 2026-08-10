@@ -32,7 +32,7 @@ public class InvoiceControllerWeb {
             return "invoice-create-form";
         }
 
-        Customer customer = customerRepository.findByName(invoiceForm.getCustomerName())
+        /*Customer customer = customerRepository.findByName(invoiceForm.getCustomerName())
                 .orElseGet(() -> {
                     Address address = new Address(
                             invoiceForm.getStreet(),
@@ -46,10 +46,18 @@ public class InvoiceControllerWeb {
                     newCustomer.setAddress(address);
 
                     return customerRepository.save(newCustomer);
-                });
+                });*/
+
+
 
         Invoice invoice = new Invoice();
+        Customer customer  = new Customer(invoiceForm.getCustomerName());
         invoice.setCustomer(customer);
+
+        Address address = new Address(invoiceForm.getStreet(), invoiceForm.getStreetNumber() , invoiceForm.getZipCode(), invoiceForm.getCity(), invoiceForm.getCountry());
+
+        customer.setAddress(address);
+
         invoice.setOrderNumber(invoiceForm.getOrderNumber());
 
         invoiceService.createInvoice(invoice);

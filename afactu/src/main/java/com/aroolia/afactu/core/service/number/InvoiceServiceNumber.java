@@ -3,6 +3,7 @@ package com.aroolia.afactu.core.service.number;
 
 import com.aroolia.afactu.core.entity.Invoice;
 
+import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,9 @@ import org.springframework.stereotype.Service;
 public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     private InvoiceRepositoryInterface invoiceRepository;
+
+    @Autowired
+    private CustomerRepositoryInterface customerRepository;
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
@@ -44,10 +48,9 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     public Invoice createInvoice(Invoice invoice){
         //invoice.setNumber(String.valueOf(++lastNumber));//la bd se charge
 
+        customerRepository.save(invoice.getCustomer());
 
         return invoiceRepository.save(invoice);
-
-        //return invoice;
     }
 
 
