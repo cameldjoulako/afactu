@@ -2,11 +2,13 @@
 package com.aroolia.afactu.core.entity;
 
 import jakarta.persistence.*;
+import org.springframework.data.jpa.repository.EntityGraph;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
 public class Invoice {
 
     @Id
