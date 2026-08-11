@@ -2,7 +2,7 @@ package com.aroolia.afactu.customer.api;
 
 import com.aroolia.afactu.core.entity.customer.Customer;
 import com.aroolia.afactu.core.entity.invoice.Invoice;
-import com.aroolia.afactu.core.service.InvoiceServiceInterface;
+
 import com.aroolia.afactu.customer.repository.CustomerRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
