@@ -1,7 +1,7 @@
 package com.aroolia.afactu.core.service;
 
 
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import org.springframework.stereotype.Service;
 

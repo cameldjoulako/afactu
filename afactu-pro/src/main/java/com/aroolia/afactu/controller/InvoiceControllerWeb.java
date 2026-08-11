@@ -1,8 +1,8 @@
 package com.aroolia.afactu.controller;
 
-import com.aroolia.afactu.core.entity.Address;
-import com.aroolia.afactu.core.entity.Customer;
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.customer.Address;
+import com.aroolia.afactu.core.entity.customer.Customer;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import com.aroolia.afactu.form.InvoiceForm;

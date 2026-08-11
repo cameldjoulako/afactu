@@ -1,6 +1,6 @@
 package com.aroolia.afactu.core.service.prefix;
 
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;

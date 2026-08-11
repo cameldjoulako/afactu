@@ -1,4 +1,4 @@
-package com.aroolia.afactu.core.entity;
+package com.aroolia.afactu.core.entity.customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 

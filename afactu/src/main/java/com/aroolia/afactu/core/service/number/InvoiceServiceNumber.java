@@ -1,9 +1,9 @@
 package com.aroolia.afactu.core.service.number;
 
 
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 
-import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
+//import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     private InvoiceRepositoryInterface invoiceRepository;
 
-    @Autowired
-    private CustomerRepositoryInterface customerRepository;
+    /*@Autowired
+    private CustomerRepositoryInterface customerRepository;*/
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
@@ -24,19 +24,6 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     @Override
     public Iterable<Invoice> getInvoiceList() {
-
-/*
-        Iterable<Invoice> invoices =  invoiceRepository.findAll();
-
-
-        //initialisation du client de chaque facture
-        invoices.forEach(invoice -> {
-            invoice.getCustomer().getName();
-        });
-
-        return invoices;
-        */
-
 
         return invoiceRepository.findAll();
     }
@@ -48,9 +35,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     @Transactional
     public Invoice createInvoice(Invoice invoice){
-        //invoice.setNumber(String.valueOf(++lastNumber));//la bd se charge
-
-        customerRepository.save(invoice.getCustomer());
+        //customerRepository.save(invoice.getCustomer());
 
         return invoiceRepository.save(invoice);
     }

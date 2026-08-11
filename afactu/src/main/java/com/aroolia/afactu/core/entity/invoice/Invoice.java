@@ -1,15 +1,15 @@
 
-package com.aroolia.afactu.core.entity;
+package com.aroolia.afactu.core.entity.invoice;
 
+import com.aroolia.afactu.core.entity.customer.Customer;
 import jakarta.persistence.*;
-import org.springframework.data.jpa.repository.EntityGraph;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
-public class Invoice {
+/* @NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer")) */
+public class  Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +17,13 @@ public class Invoice {
     private String number;
     @Column(length = 13)
     private String orderNumber;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_CUSTOMER", nullable = false)
+
+    private Long idCustomer;
+
+
+    @Transient
     private Customer customer;
+
     @OneToMany(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
@@ -80,5 +84,13 @@ public class Invoice {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public Long getIdCustomer() {
+        return idCustomer;
+    }
+
+    public void setIdCustomer(Long idCustomer) {
+        this.idCustomer = idCustomer;
     }
 }

@@ -2,7 +2,7 @@
 package com.aroolia.afactu.core.repository.database;
 
 
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

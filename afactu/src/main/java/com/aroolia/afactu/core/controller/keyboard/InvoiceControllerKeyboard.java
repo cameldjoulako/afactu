@@ -1,8 +1,8 @@
 package com.aroolia.afactu.core.controller.keyboard;
 
 import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
-import com.aroolia.afactu.core.entity.Customer;
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.customer.Customer;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 
 import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 

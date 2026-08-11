@@ -1,10 +1,7 @@
-package com.aroolia.afactu.core.repository;
+package com.aroolia.afactu.customer.repository;
 
-import com.aroolia.afactu.core.entity.Customer;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.aroolia.afactu.core.entity.customer.Customer;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.Optional;
 
 /*
 public interface CustomerRepositoryInterface extends JpaRepository<Customer, Long> {

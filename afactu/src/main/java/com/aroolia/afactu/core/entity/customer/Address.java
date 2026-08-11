@@ -1,6 +1,5 @@
 
-package com.aroolia.afactu.core.entity;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+package com.aroolia.afactu.core.entity.customer;
 import jakarta.persistence.*;
 
 @Entity

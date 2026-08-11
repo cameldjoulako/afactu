@@ -1,13 +1,11 @@
 package com.aroolia.afactu.core.repository;
 
 
-import com.aroolia.afactu.core.entity.Invoice;
+import com.aroolia.afactu.core.entity.invoice.Invoice;
 import org.springframework.data.jpa.repository.EntityGraph;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 //import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
 //@Repository
 public interface InvoiceRepositoryInterface extends CrudRepository<Invoice, String> {
