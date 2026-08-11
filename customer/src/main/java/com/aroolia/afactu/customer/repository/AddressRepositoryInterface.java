@@ -1,5 +1,6 @@
 package com.aroolia.afactu.customer.repository;
 
+import com.aroolia.afactu.core.entity.customer.Address;
 import com.aroolia.afactu.core.entity.customer.Customer;
 import org.springframework.data.repository.CrudRepository;
 
@@ -8,6 +9,6 @@ public interface CustomerRepositoryInterface extends JpaRepository<Customer, Lon
     Optional<Customer> findByName(String name);
 }*/
 
-public interface CustomerRepositoryInterface extends CrudRepository<Customer, Long> {
+public interface AddressRepositoryInterface extends CrudRepository<Address, Long> {
     //Optional<Customer> findByName(String name);
 }

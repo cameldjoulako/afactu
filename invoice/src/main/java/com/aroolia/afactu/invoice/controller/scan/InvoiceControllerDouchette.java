@@ -1,9 +1,9 @@
-package com.aroolia.afactu.core.controller.scan;
+package com.aroolia.afactu.invoice.controller.scan;
 
-import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.invoice.controller.InvoiceControllerInterface;
 import com.aroolia.afactu.core.entity.customer.Customer;
 import com.aroolia.afactu.core.entity.invoice.Invoice;
-import com.aroolia.afactu.core.service.InvoiceServiceInterface;
+import com.aroolia.afactu.invoice.service.InvoiceServiceInterface;
 
 //@Controller
 public class InvoiceControllerDouchette implements InvoiceControllerInterface {
