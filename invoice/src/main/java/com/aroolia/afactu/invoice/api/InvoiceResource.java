@@ -49,6 +49,7 @@ public class InvoiceResource {
         out.println("La méthode display all invoice a été invoquée");
         Iterable<Invoice> invoices = invoiceService.getInvoiceList();
         return StreamSupport.stream(invoices.spliterator(), false)
+
                 .collect(Collectors.toList());
     }
 }
