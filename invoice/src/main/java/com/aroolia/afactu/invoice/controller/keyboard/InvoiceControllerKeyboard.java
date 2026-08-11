@@ -1,10 +1,10 @@
-package com.aroolia.afactu.core.controller.keyboard;
+package com.aroolia.afactu.invoice.controller.keyboard;
 
-import com.aroolia.afactu.core.controller.InvoiceControllerInterface;
+import com.aroolia.afactu.invoice.controller.InvoiceControllerInterface;
 import com.aroolia.afactu.core.entity.customer.Customer;
 import com.aroolia.afactu.core.entity.invoice.Invoice;
+import com.aroolia.afactu.invoice.service.InvoiceServiceInterface;
 
-import com.aroolia.afactu.core.service.InvoiceServiceInterface;
 
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 
-fetch('../invoice')
+fetch('invoice')
     .then(res => res.json())
     .then(res => {
         var invoiceListNode = document.getElementById('invoice-list');
@@ -42,7 +42,7 @@ fetch('../invoice')
 
 
 function showDetail(invoiceNumber){
-    fetch(invoiceNumber)
+    fetch("invoice/"+invoiceNumber)
     .then(res => res.json())
     .then(res => {
         var invoiceDetailNode = document.getElementById('invoice-detail');
@@ -64,7 +64,7 @@ function showDetail(invoiceNumber){
         invoiceDetailNode.appendChild(p);
 
         p = document.createElement("p");
-        text = document.createTextNode(`Customer country: ${res.customer.adress.city}`);
+        text = document.createTextNode(`Customer Country: ${res.customer.address.country}`);
         p.appendChild(text);
         invoiceDetailNode.appendChild(p);
 

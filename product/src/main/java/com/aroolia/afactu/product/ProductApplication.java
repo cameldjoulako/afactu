@@ -16,7 +16,10 @@ public class ProductApplication {
 
     @Bean
     public Hibernate7Module hibernate7Module() {
-        return new Hibernate7Module();
-    }
+        Hibernate7Module module = new Hibernate7Module();
+        module.disable(Hibernate7Module.Feature.USE_TRANSIENT_ANNOTATION);
+        module.enable(Hibernate7Module.Feature.SERIALIZE_IDENTIFIER_FOR_LAZY_NOT_LOADED_OBJECTS);
 
+        return module;
+    }
 }

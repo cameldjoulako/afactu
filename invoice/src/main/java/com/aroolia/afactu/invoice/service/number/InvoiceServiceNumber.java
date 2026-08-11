@@ -1,11 +1,11 @@
-package com.aroolia.afactu.core.service.number;
+package com.aroolia.afactu.invoice.service.number;
 
 
 import com.aroolia.afactu.core.entity.invoice.Invoice;
 
 //import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
-import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
-import com.aroolia.afactu.core.service.InvoiceServiceInterface;
+import com.aroolia.afactu.invoice.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.invoice.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

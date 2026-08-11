@@ -1,25 +1,14 @@
-package com.aroolia.afactu.controller;
+package com.aroolia.afactu.invoice.controller;
 
-import com.aroolia.afactu.core.entity.customer.Address;
-import com.aroolia.afactu.core.entity.customer.Customer;
-import com.aroolia.afactu.core.entity.invoice.Invoice;
-import com.aroolia.afactu.core.repository.CustomerRepositoryInterface;
-import com.aroolia.afactu.core.service.InvoiceServiceInterface;
-import com.aroolia.afactu.form.InvoiceForm;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 @Controller
-@RequestMapping("/invoice")
 public class InvoiceControllerWeb {
-
-    @Autowired
+    /*@Autowired
     private InvoiceServiceInterface invoiceService;
 
     @Autowired
@@ -31,24 +20,6 @@ public class InvoiceControllerWeb {
         if (bindingResult.hasErrors()) {
             return "invoice-create-form";
         }
-
-        /*Customer customer = customerRepository.findByName(invoiceForm.getCustomerName())
-                .orElseGet(() -> {
-                    Address address = new Address(
-                            invoiceForm.getStreet(),
-                            invoiceForm.getStreetNumber(),
-                            invoiceForm.getCity(),
-                            invoiceForm.getZipCode(),
-                            invoiceForm.getCountry()
-                    );
-
-                    Customer newCustomer = new Customer(invoiceForm.getCustomerName());
-                    newCustomer.setAddress(address);
-
-                    return customerRepository.save(newCustomer);
-                });*/
-
-
 
         Invoice invoice = new Invoice();
         Customer customer  = new Customer(invoiceForm.getCustomerName());
@@ -65,15 +36,16 @@ public class InvoiceControllerWeb {
         return "invoice-created";
     }
 
-    @GetMapping("/home")
-    public String displayHome(Model model) {
-        out.println("La méthode displayHome a été invoquée");
-        model.addAttribute("invoices", invoiceService.getInvoiceList());
-        return "invoice-home";
-    }
 
     @GetMapping("/create-form")
     public String displayInvoiceCreateForm(@ModelAttribute InvoiceForm invoice) {
         return "invoice-create-form";
+    }*/
+
+    @GetMapping("/home")
+    public String displayHome(Model model) {
+        out.println("La méthode displayHome a été invoquée");
+        return "invoice-home";
     }
+
 }

@@ -1,7 +1,7 @@
-package com.aroolia.afactu.core.repository.memory;
+package com.aroolia.afactu.invoice.repository.memory;
 
 import com.aroolia.afactu.core.entity.invoice.Invoice;
-import com.aroolia.afactu.core.repository.InvoiceRepositoryInterface;
+import com.aroolia.afactu.invoice.repository.InvoiceRepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;
