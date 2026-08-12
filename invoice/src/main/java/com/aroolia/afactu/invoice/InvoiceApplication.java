@@ -26,11 +26,11 @@ public class InvoiceApplication {
         return module;
     }
 
-    @Bean
+    /*@Bean
     @LoadBalanced
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
-    }
+    }*/
 
     @Bean
     @LoadBalanced
