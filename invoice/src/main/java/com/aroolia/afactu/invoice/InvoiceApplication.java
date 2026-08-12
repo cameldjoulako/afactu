@@ -7,6 +7,7 @@ import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
 @EntityScan("com.aroolia.afactu.core.entity.invoice")
@@ -31,5 +32,10 @@ public class InvoiceApplication {
         return new RestTemplate();
     }
 
+    @Bean
+    @LoadBalanced
+    public WebClient.Builder getWebClient() {
+        return WebClient.builder();
+    }
 
 }
